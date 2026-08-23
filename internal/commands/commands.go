@@ -17,5 +17,6 @@ func Dispatch(args []string) string {
 	if h, ok := handlers[cmd]; ok {
 		return h(cmd, args[1:])
 	}
+
 	return fmt.Sprintf("-ERR unknown command '%s'\r\n", cmd)
 }
